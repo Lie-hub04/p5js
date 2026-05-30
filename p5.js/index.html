@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P5.js Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-row">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <span class="logo-name">P5.JS</span>
+      </div>
+      <p class="sidebar-subtitle">비주얼포트폴리오<br>과제 모음집입니다</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active"><span class="nav-dot"></span>Main</a>
+      <a href="sample1.html"><span class="nav-dot"></span>과제 1</a>
+      <a href="sample2.html"><span class="nav-dot"></span>과제 2</a>
+      <a href="sample3.html"><span class="nav-dot"></span>과제 3</a>
+      <a href="sample4.html"><span class="nav-dot"></span>과제 4</a>
+    </nav>
+    <div class="sidebar-footer">© 2026 장성원</div>
+  </aside>
+
+  <div class="main-content">
+
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>나의 p5.js<br><span>작품 전시관</span></h1>
+          <p>정적 그래픽과 동적 인터랙션 작품을 한눈에 감상할 수 있는 포트폴리오입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-grid">
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/과제1 장성원.png" alt="과제 1" />
+              <div class="card-overlay"></div>
+              <span class="badge static">정적 작품</span>
+            </div>
+            <div class="card-body">
+              <h3>과제 1</h3>
+              <p>p5.js를 활용하여 제작한 정적 그래픽 작품입니다.</p>
+              <a href="sample1.html" class="btn-link">
+                작품 보기
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/과제4 장성원.gif" alt="과제 4" />
+              <div class="card-overlay"></div>
+              <span class="badge dynamic">동적 작품</span>
+            </div>
+            <div class="card-body">
+              <h3>과제 4</h3>
+              <p>애니메이션과 움직임이 포함된 인터랙티브 작품입니다.</p>
+              <a href="sample4.html" class="btn-link">
+                작품 보기
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/과제2 장성원.png" alt="과제 2" />
+              <div class="card-overlay"></div>
+              <span class="badge static">정적 작품</span>
+            </div>
+            <div class="card-body">
+              <h3>과제 2</h3>
+              <p>색상과 구성을 활용한 정적 디자인 작품입니다.</p>
+              <a href="sample2.html" class="btn-link">
+                작품 보기
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="images/과제3 장성원.gif" alt="과제 3" />
+              <div class="card-overlay"></div>
+              <span class="badge dynamic">동적 작품</span>
+            </div>
+            <div class="card-body">
+              <h3>과제 3</h3>
+              <p>움직임과 반복 패턴을 이용한 애니메이션 작품입니다.</p>
+              <a href="sample3.html" class="btn-link">
+                작품 보기
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const i = Array.from(cards).indexOf(entry.target);
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(c => observer.observe(c));
+  </script>
+
+</body>
+</html>
