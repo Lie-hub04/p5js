@@ -435,3 +435,51 @@ a { text-decoration: none; color: inherit; }
   .main-content { margin-left: 0; }
   .gallery-grid { grid-template-columns: 1fr; }
 }
+
+.project-section{
+  padding:100px 0;
+  border-top:1px solid var(--border);
+}
+
+.project-section h2{
+  text-align:center;
+  font-size:2.5rem;
+  margin-bottom:40px;
+}
+
+.project-image{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.project-image img{
+  width:100%;
+  max-width:800px;
+  border-radius:14px;
+}
+
+.project-desc{
+  max-width:800px;
+  margin:0 auto 50px;
+  line-height:1.8;
+}
+
+.motive-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:40px;
+}
+
+.motive-card{
+  background:var(--bg-card);
+  padding:20px;
+  border-radius:14px;
+  border:1px solid var(--border);
+}
+
+.motive-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
