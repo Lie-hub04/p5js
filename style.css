@@ -514,3 +514,18 @@ a { text-decoration: none; color: inherit; }
 .motive-card a:hover{
   text-decoration: underline;
 }
+
+.motive-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.motive-card{
+  background: #121212;
+  padding: 15px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
