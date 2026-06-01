@@ -452,12 +452,6 @@ a { text-decoration: none; color: inherit; }
   margin-bottom:40px;
 }
 
-.project-image img{
-  width:100%;
-  max-width:800px;
-  border-radius:14px;
-}
-
 .project-desc{
   max-width:800px;
   margin:0 auto 50px;
@@ -469,19 +463,6 @@ a { text-decoration: none; color: inherit; }
   grid-template-columns:1fr 1fr;
   gap:24px;
   margin-bottom:40px;
-}
-
-.motive-card{
-  background:var(--bg-card);
-  padding:20px;
-  border-radius:14px;
-  border:1px solid var(--border);
-}
-
-.motive-card img{
-  width:100%;
-  border-radius:10px;
-  margin-bottom:15px;
 }
 
 .project-image img{
@@ -497,12 +478,11 @@ a { text-decoration: none; color: inherit; }
 
 .motive-card img{
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16/9;
   object-fit: contain;
 
-  display: block;
-  border-radius: 10px;
   background: #111;
+  border-radius: 10px;
 }
 
 .motive-card a{
