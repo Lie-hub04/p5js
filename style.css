@@ -434,6 +434,7 @@ a { text-decoration: none; color: inherit; }
   }
   .main-content { margin-left: 0; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .motive-grid { grid-template-columns: 1fr; }
 }
 
 .project-section{
@@ -456,13 +457,6 @@ a { text-decoration: none; color: inherit; }
   max-width:800px;
   margin:0 auto 50px;
   line-height:1.8;
-}
-
-.motive-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  margin-bottom:40px;
 }
 
 .project-image img{
@@ -496,15 +490,17 @@ a { text-decoration: none; color: inherit; }
 }
 
 .motive-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-bottom:40px;
 }
 
 .motive-card{
-  background: #121212;
+  background: var(--bg-card);
   padding: 15px;
   border-radius: 12px;
+  border: 1px solid var(--border);
 
   display: flex;
   flex-direction: column;
