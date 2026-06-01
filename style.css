@@ -497,12 +497,12 @@ a { text-decoration: none; color: inherit; }
 
 .motive-card img{
   width: 100%;
-
-  height: 250px;      
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
 
   display: block;
   border-radius: 10px;
+  background: #111;
 }
 
 .motive-card a{
