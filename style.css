@@ -389,7 +389,8 @@ a { text-decoration: none; color: inherit; }
   color: var(--primary);
   font-size: 1.3rem;
   margin-bottom: 15px;
-  text-align: center;
+
+  text-align: left;
   
   border-left: 4px solid var(--primary);
   padding-left: 12px;
